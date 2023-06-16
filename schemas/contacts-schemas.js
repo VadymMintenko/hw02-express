@@ -21,10 +21,14 @@ const loginSchema = Joi.object({
   email: Joi.string().required(),
   password: Joi.string().min(6).required(),
 });
+const emailSchema = Joi.object({
+  email: Joi.string().required(),
+});
 
 module.exports = {
   contactAddSchema,
   updateFavoriteSchema,
   registerSchema,
   loginSchema,
+  emailSchema,
 };
